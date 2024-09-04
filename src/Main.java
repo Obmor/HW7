@@ -9,6 +9,7 @@ public class Main {
         int month = -1;
         while (total <= 2_459_000) {
             total = total + sum;
+            total = total / 100 * 101;
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total +
                     " рублей.");
@@ -17,11 +18,13 @@ public class Main {
 
         System.out.println();
         System.out.println("Exercise 2.");
-        for (int a = 1; a <= 10; a++) {
+        int a = 0;
+        while (a < 10) {
+            a++;
             System.out.print(a + " ");
         }
         System.out.println();
-        for (int b =10; b <= 10 && b >= 1; b--) {
+        for (int b = 10; b <= 10 && b >= 1; b--) {
             System.out.print(b + " ");
         }
         System.out.println();
@@ -93,14 +96,14 @@ public class Main {
             if (day == friday || day == friday + 7 || day == friday + 14 || day == friday +
                     21 || day == friday + 28) {
                 System.out.println("Сегодня пятница, " + day + " число. Необходимо " +
-                        "подготовить отчет.");
+                        "подготовить отчет."); // от 4 до 5 итераций, кажется, что все верно.
             }
         }
 
 
         System.out.println();
         System.out.println("Exercise 8.");
-        int currentYear = 2024;
+        int currentYear = 2017;
         int previousPeriod = currentYear - 200;
         int nextPeriod = currentYear + 100;
         int cometTime = 79;
