@@ -90,27 +90,24 @@ public class Main {
         System.out.println();
         System.out.println("Exercise 7.");
         int friday = 3;
-        int day = 0;
-        while (day <= 30) {
-            day++;
-            if (day == friday || day == friday + 7 || day == friday + 14 || day == friday +
-                    21 || day == friday + 28) {
-                System.out.println("Сегодня пятница, " + day + " число. Необходимо " +
-                        "подготовить отчет."); // от 4 до 5 итераций, кажется, что все верно.
-            }
+        while (friday <= 31) {
+            System.out.println(friday);
+            friday = friday + 7;
         }
 
 
         System.out.println();
         System.out.println("Exercise 8.");
-        int currentYear = 2017;
+        int startOfVisit = 0;
+        int currentYear = 2024;
         int previousPeriod = currentYear - 200;
         int nextPeriod = currentYear + 100;
-        int cometTime = 79;
         do {
-            previousPeriod = previousPeriod + cometTime;
-            System.out.println(previousPeriod);
+            startOfVisit = startOfVisit + 79;
+            if (startOfVisit >= previousPeriod && startOfVisit <= nextPeriod) {
+                System.out.println(startOfVisit);
+            }
         }
-        while (previousPeriod <= nextPeriod - cometTime);
+        while (startOfVisit <= nextPeriod);
     }
 }
